@@ -44,5 +44,29 @@ RRRR
 OOOOOOOOOOO
 OOOO
 
+Scenario: Noon
+When the time is 12:00:00
+Then the clock should look like
+Y
+RROO
+RROO
+OOOOOOOOOOO
+OOOO
 
+Scenario: Before Noon
+When the time is 11:59:59
+Then the clock should look like
+O
+RROO
+ROOO
+YYRYYRYYRYY
+YYYY
 
+Scenario: Some random time
+When the time is 01:17:01
+Then the clock should look like
+O
+OOOO
+ROOO
+YYROOOOOOOO
+YYOO
